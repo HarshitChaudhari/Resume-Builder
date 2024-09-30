@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="background">
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resumeForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone no." required>
+
+            <label for="education">Education:</label>
+            <textarea id="education" placeholder="eg. B.Tech in Computer Science" required></textarea>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" placeholder="eg. HTML, CSS, JavaScript" required></textarea>
+
+            <div id="experienceFields">
+                <label>Experience:</label>
+                <textarea class="experience" placeholder="Job Title at Company (Year)" required></textarea>
+            </div>
+            <button type="button" id="addExperienceBtn">Add More Experience</button>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <div id="resumeOutput" class="resume hidden">
+            <div id="resumeContent">
+                <h2 id="rName"></h2>
+                <p><strong>Email:</strong> <span id="rEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="rPhone"></span></p>
+                <hr>
+                <h3>Education</h3>
+                <p id="rEducation"></p>
+                <h3>Skills</h3>
+                <p id="rSkills"></p>
+                <h3>Experience</h3>
+                <ul id="rExperience"></ul>
+            </div>
+            <button id="downloadBtn">Download as PDF</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
